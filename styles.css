@@ -164,6 +164,7 @@ blockquote{                 /*Styling the blockquote beneath the main img*/
 .columns2 {
     display:flex;
     border-top: 1px solid black;
+    border-bottom: 1px solid black;
 }
 .sidestories {
     flex:1;
@@ -171,6 +172,7 @@ blockquote{                 /*Styling the blockquote beneath the main img*/
     flex-direction: column;
     border-right: 1px solid black;
     margin-right: 10px;
+    margin-bottom: 20px;
 }
 .mainstory {
     flex:3;
@@ -178,6 +180,7 @@ blockquote{                 /*Styling the blockquote beneath the main img*/
     flex-direction: column;
     /*align-items: baseline;*/
     margin-left: 20px;
+    margin-bottom: 20px;
     
     /*column-span: all;
     column-fill: balance;*/
@@ -188,5 +191,40 @@ blockquote{                 /*Styling the blockquote beneath the main img*/
 .newsstyle {
     columns: 2;
     column-fill:auto;
-    height:600px;
+    height:720px;
+}
+/*.adcaption {
+    display:inline-flex;
+}*/
+.adimg {
+    max-width: 100%;
+    height:auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 3px;
+    width: 100px;
+    /*display:inline-flex;*/
+}
+.grid-container {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-auto-rows: minmax(100px, auto);
+    justify-content:space-around;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+    
+}
+.ads {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 3px;
+    
+}
+.adcaption {
+    text-transform: capitalize;
+    color: #dd614a;
+    padding-left: 10px;
 }
