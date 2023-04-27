@@ -6,7 +6,7 @@ body {
 
 }
 a {
-    color:#dd614a;
+    color:#dd614a;                              /*Declaring color styles for different link states*/
 }
 a:visited {
     color: #555555;
@@ -86,7 +86,7 @@ h4 {
     font-family: "PromptRegular", sans-serif; 
 }
 
-.columns {
+.columns {                                          /*Splitting the top section into two columns where mainc column takes up 2.5x the size of minorc column*/
     display:flex;
     border-bottom: 1px solid black;
 }
@@ -105,7 +105,7 @@ h4 {
     /*margin-right: 5%;*/
 }
 #fajitas {
-    flex: 1;
+    
     max-width: 85%;
     justify-content: flex-start;
     margin-bottom: 10px;
@@ -114,7 +114,7 @@ h4 {
     margin-top: 2px;
     font-family: "Gotham", Arial, Helvetica, sans-serif;
 }
-.mainpara {
+.mainpara {                                                 /*Style for the first article only*/
     max-width: 90%;
     font-family: "Garamond", sans-serif;
     margin-bottom: 0em;
@@ -125,16 +125,16 @@ h4 {
 }*/
 #startpara::first-letter {
     -webkit-initial-letter: 3 2;
-    initial-letter: 3 2;          /*Capitalising first letter of paragraph*/
+    initial-letter: 3 2;            /*Capitalising first letter of paragraph*/
     color: #FFEA00;
     font-weight: bold;
     margin-right: .35em;
 }
-blockquote{                 /*Styling the blockquote beneath the main img*/
+blockquote{                         /*Styling the blockquote beneath the main img*/
     font-size: 1.1em;
     width:60%;
     /*margin:20px auto;*/
-    margin-left: 50px;
+    margin-left: 50px;              /*Margins are a little iffy here, and it breaks down in smaller screen sizes. Media queries might solve this problem.*/
     margin-right: 50px;
     font-family:OpenSans;
     font-style:italic;
@@ -151,8 +151,8 @@ blockquote{                 /*Styling the blockquote beneath the main img*/
     align-self: center;
     
 }*/
-.minorpara {
-    font-family: "Garamond", sans-serif;
+.minorpara {                                            /*Common styling for rest of the paragraphs in the main page*/
+    font-family: "Garamond", sans-serif;      
     margin-bottom: 0em;
     text-align: justify;
 }
@@ -171,16 +171,15 @@ blockquote{                 /*Styling the blockquote beneath the main img*/
     display:flex;
     flex-direction: column;
     border-right: 1px solid black;
-    margin-right: 10px;
-    margin-bottom: 20px;
+    
+    padding-bottom: 20px;
 }
 .mainstory {
     flex:3;
-    display:flex;
+    /*display:flex;
     flex-direction: column;
-    /*align-items: baseline;*/
-    margin-left: 20px;
-    margin-bottom: 20px;
+    align-items: baseline;*/
+    padding-left: 1em;
     
     /*column-span: all;
     column-fill: balance;*/
@@ -189,13 +188,14 @@ blockquote{                 /*Styling the blockquote beneath the main img*/
     column-span: all;
 }
 .newsstyle {
-    columns: 2;
-    column-fill:auto;
-    height:720px;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-width: 250px;
+     -moz-column-width: 250px;
+          column-width: 250px;
 }
-/*.adcaption {
-    display:inline-flex;
-}*/
+
 .adimg {
     max-width: 100%;
     height:auto;
@@ -205,17 +205,16 @@ blockquote{                 /*Styling the blockquote beneath the main img*/
     width: 100px;
     /*display:inline-flex;*/
 }
-.grid-container {
+.grid-container {                               /*Using a grid to display ads in custom columns*/
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
     grid-auto-rows: minmax(100px, auto);
     justify-content:space-around;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     border-bottom: 1px solid black;
-    
 }
 .ads {
     border: 1px solid #ddd;
@@ -227,4 +226,18 @@ blockquote{                 /*Styling the blockquote beneath the main img*/
     text-transform: capitalize;
     color: #dd614a;
     padding-left: 10px;
+}
+.footer {                                       /*Split footer content into two parts for easy alignment*/
+    display:flex;
+    justify-content: space-between;
+}
+.footer1 {
+    align-items: flex-start;
+    font-family: "PromptRegular", sans-serif;
+    font-size: smaller;
+}
+.footer2 {
+    display: inline-flex;
+    font-family: "PromptRegular", sans-serif;
+    font-size: smaller;
 }
