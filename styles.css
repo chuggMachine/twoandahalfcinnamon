@@ -27,7 +27,7 @@ a:active {
 h1 {
     font-family: "Baskerville", serif, sans-serif;
     letter-spacing: 0px;
-    font-size: 46px;
+    font-size: 3rem;
     margin-bottom: 10px;
     margin-top: 10px;
 }
@@ -171,8 +171,10 @@ blockquote{                         /*Styling the blockquote beneath the main im
     display:flex;
     flex-direction: column;
     border-right: 1px solid black;
-    
     padding-bottom: 20px;
+}
+#heading2 {
+    font-size: 2.5rem;
 }
 .mainstory {
     flex:3;
@@ -191,9 +193,7 @@ blockquote{                         /*Styling the blockquote beneath the main im
     -webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
-    -webkit-column-width: 250px;
-     -moz-column-width: 250px;
-          column-width: 250px;
+    
 }
 
 .adimg {
@@ -210,7 +210,7 @@ blockquote{                         /*Styling the blockquote beneath the main im
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
-    grid-auto-rows: minmax(100px, auto);
+    grid-auto-rows: minmax(100px, 1fr);
     justify-content:space-around;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -240,4 +240,85 @@ blockquote{                         /*Styling the blockquote beneath the main im
     display: inline-flex;
     font-family: "PromptRegular", sans-serif;
     font-size: smaller;
+}
+
+/*For Mobile Phones*/
+
+@media (max-width: 768px) {
+    body {
+        max-width: 90%;
+    }
+    .mainlogo {
+        padding-top: 10px;
+    }
+    .nav {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .navlinks {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 0.8rem;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    #heading2 {
+        font-size: 1.8rem;
+    }
+    .subtitle {
+        font-size: 0.7rem;
+    }
+
+    .columns {                                          /*Splitting the top section into two columns where mainc column takes up 2.5x the size of minorc column*/
+        display:flex;
+        flex-direction: column;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #FFEA00;
+    }
+    .minorc {
+        width: 100%;
+        margin:0%;
+    }
+    .mainc {
+        width: 100%;
+        border-right: 0;
+        border-bottom: 1px solid #FFEA00;
+    }
+    blockquote {
+        margin-left: 0;              /*Margins are a little iffy here, and it breaks down in smaller screen sizes. Media queries might solve this problem.*/
+        margin-right: 50;
+        align-self: center;
+    }
+    .othernews {
+        text-transform: uppercase;
+    }
+    .columns2 {
+        display:flex;
+        flex-direction: column;
+        border-top: 1px solid #FFEA00;
+        border-bottom: 1px solid #FFEA00;
+    }
+    .sidestories {
+        border-right:0;
+        border-bottom: 1px solid #FFEA00;
+    }
+    .mainstory {
+        padding-left:0;
+        padding-bottom: 15px;
+
+    }
+    .newsstyle {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    .ads {
+        align-items: center;
+    }
+      
+
 }
