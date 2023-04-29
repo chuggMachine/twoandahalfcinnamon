@@ -9,7 +9,7 @@ a {
     color:#dd614a;                              /*Declaring color styles for different link states*/
 }
 a:visited {
-    color: #555555;
+    color: #dd614a;
 }
 a:hover {
     color: black;
@@ -250,10 +250,13 @@ blockquote{                         /*Styling the blockquote beneath the main im
     }
     .mainlogo {
         padding-top: 10px;
+        max-width: 80%;
     }
     .nav {
         margin-top: 10px;
         margin-bottom: 10px;
+        border-top: 1px solid black;
+    border-bottom: 1px solid black;
     }
     .navlinks {
         margin-top: 10px;
@@ -270,7 +273,7 @@ blockquote{                         /*Styling the blockquote beneath the main im
         font-size: 0.7rem;
     }
 
-    .columns {                                          /*Splitting the top section into two columns where mainc column takes up 2.5x the size of minorc column*/
+    .columns {                                          
         display:flex;
         flex-direction: column;
         padding-bottom: 15px;
@@ -280,15 +283,19 @@ blockquote{                         /*Styling the blockquote beneath the main im
         width: 100%;
         margin:0%;
     }
+    #fajitas {
+        max-width: 100%;
+    }
     .mainc {
         width: 100%;
         border-right: 0;
         border-bottom: 1px solid #FFEA00;
     }
     blockquote {
-        margin-left: 0;              /*Margins are a little iffy here, and it breaks down in smaller screen sizes. Media queries might solve this problem.*/
+        margin-left: 0;              
         margin-right: 50;
         align-self: center;
+        width:80%;
     }
     .othernews {
         text-transform: uppercase;
