@@ -71,7 +71,7 @@ h4 {
     font-family: "Gotham";
     src: url(./fonts/GothamLight.ttf);
 }
-.nav {
+.nav {                                              /*Navigation bar*/
     border-top: 1.5px solid black;
     border-bottom: 1.5px solid black;
     margin-top: 20px;
@@ -86,18 +86,18 @@ h4 {
     font-family: "PromptRegular", sans-serif; 
 }
 
-.columns {                                          /*Splitting the top section into two columns where mainc column takes up 2.5x the size of minorc column*/
+.columns {                                          /*Container for first row of articles*/
     display:flex;
     border-bottom: 1px solid black;
 }
-.minorc {
+.minorc {                                           /*Right side column for first row of artiles*/
     flex:1;
     display:flex;
     flex-direction: column;
     /*align-items: baseline;*/
     margin-left: 20px;
 }
-.mainc {
+.mainc {                                            /*Left side column for first row of artiles*/
     flex:2.5;
     display:flex;
     flex-direction: column;
@@ -159,12 +159,12 @@ blockquote{                         /*Styling the blockquote beneath the main im
     padding-top: 10px;
 }
 
-.columns2 {
+.columns2 {                                             /*Second row of articles*/
     display:flex;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
 }
-.sidestories {
+.sidestories {                                          /*Left side column for second row of articles*/
     flex:1;
     display:flex;
     flex-direction: column;
@@ -174,34 +174,27 @@ blockquote{                         /*Styling the blockquote beneath the main im
 #heading2 {
     font-size: 2.5rem;
 }
-.mainstory {
+.mainstory {                                            /*Right side column for second row of articles*/
     flex:3;
-    /*display:flex;
-    flex-direction: column;
-    align-items: baseline;*/
     padding-left: 1em;
-    
-    /*column-span: all;
-    column-fill: balance;*/
 }
 #heading2 {
     column-span: all;
 }
-.newsstyle {
+.newsstyle {                                    /*Splitting the content into columns for the second story of the second row*/
     -webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
     
 }
 
-.adimg {
+.adimg {                                        /*Image attributes for ads at the bottom of the page*/
     max-width: 100%;
     height:auto;
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 3px;
     width: 100px;
-    /*display:inline-flex;*/
 }
 .grid-container {                               /*Using a grid to display ads in custom columns*/
     display:grid;
@@ -214,13 +207,13 @@ blockquote{                         /*Styling the blockquote beneath the main im
     padding-bottom: 15px;
     border-bottom: 1px solid black;
 }
-.ads {
+.ads {                                          /*Container for ads*/
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 3px;
     
 }
-.adcaption {
+.adcaption {                                    /*Captions for ads*/
     text-transform: capitalize;
     color: #dd614a;
     padding-left: 10px;
@@ -244,13 +237,13 @@ blockquote{                         /*Styling the blockquote beneath the main im
 
 @media (max-width: 768px) {
     body {
-        max-width: 90%;
+        max-width: 90%;                             /*Increased body width for better viewing on mobile screens.*/
     }
-    .mainlogo {
+    .mainlogo {                                     /*Increased logo size for scaling*/
         padding-top: 10px;
         max-width: 80%;
     }
-    .nav {
+    .nav {                                          /*Made nav elements smaller for scaling*/
         margin-top: 10px;
         margin-bottom: 10px;
         border-top: 1px solid black;
@@ -261,7 +254,7 @@ blockquote{                         /*Styling the blockquote beneath the main im
         margin-bottom: 10px;
         font-size: 0.8rem;
     }
-    h1 {
+    h1 {                                        /*Optimise font sizes for mobile*/
         font-size: 2rem;
     }
     #heading2 {
@@ -271,7 +264,7 @@ blockquote{                         /*Styling the blockquote beneath the main im
         font-size: 0.7rem;
     }
 
-    .columns {                                          
+    .columns {                                   /*Removed attributes that set content in side by side columns since those are useless for mobile screens*/                   
         display:flex;
         flex-direction: column;
         padding-bottom: 15px;
@@ -284,7 +277,7 @@ blockquote{                         /*Styling the blockquote beneath the main im
     #fajitas {
         max-width: 100%;
     }
-    .mainpara {                                                 /*Style for the first article only*/
+    .mainpara {                                                 
         max-width: 100%;
     }
     .mainc {
@@ -316,12 +309,12 @@ blockquote{                         /*Styling the blockquote beneath the main im
         padding-bottom: 15px;
 
     }
-    .newsstyle {
+    .newsstyle {                                    /*Reverting the newspaper style columns for the 2nd article on 2nd row to a single column*/
         -webkit-column-count: 1;
         -moz-column-count: 1;
         column-count: 1;
     }
-    .grid-container {
+    .grid-container {                               /*Making the grid display ads in a single column*/
         grid-template-columns: 1fr;
     }
     .ads {
